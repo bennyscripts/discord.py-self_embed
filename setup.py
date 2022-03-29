@@ -36,7 +36,7 @@ It uses Rauf's embed generator so its a web embed.
 setup(
     name='discord.py-self_embed',
     packages=['discord_self_embed', 'discord_self_embed.utils'],
-    version='1.0.3',
+    version='1.0.4',
     license='MIT',
     description='A way for selfbots to send embeds again.',
     author='Ben Tettmar',
