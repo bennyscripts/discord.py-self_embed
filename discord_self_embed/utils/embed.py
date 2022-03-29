@@ -74,15 +74,33 @@ class Embed:
 
         self.params["colour"] = colour        
 
-    def set_author(self, name) -> None:
+    def set_author(self, name, *, url) -> None:
         """
         Set the author of the embed.
 
         Parameters:
             name (str): The name of the author.
+            url (str): The url to redirect to when the author is clicked.
         """
 
-        self.params["author"] = name
+        self.params["author_name"] = name
+
+        if url:
+            self.params["author_url"] = url
+
+    def set_provider(self, name, *, url) -> None:
+        """
+        Set the provider of the embed.
+
+        Parameters:
+            name (str): The name of the provider.
+            url (str): The url to redirect to when the provider is clicked.
+        """
+
+        self.params["provider_name"] = name
+
+        if url:
+            self.params["provider_url"] = url
 
     def set_image(self, url) -> None:
         """
@@ -93,6 +111,16 @@ class Embed:
         """
 
         self.params["image"] = url
+
+    def set_video(self, url) -> None:
+        """
+        Set the video of the embed.
+
+        Parameters:
+            url (str): The url of the video.
+        """
+
+        self.params["video"] = url
 
     def generate_url(self, *, hide_url=False) -> str:
         """
