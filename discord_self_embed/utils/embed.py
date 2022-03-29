@@ -44,15 +44,45 @@ class Embed:
 
         return self.generate_url(hide_url=True)
 
-    def set_author(self, text) -> None:
+    def set_title(self, title) -> None:
+        """
+        Set the title of the embed.
+
+        Parameters:
+            title (str): The title of the embed.
+        """
+
+        self.params["title"] = title
+    
+    def set_description(self, description) -> None:
+        """
+        Set the description of the embed.
+
+        Parameters:
+            description (str): The description of the embed. (Max 340 characters)
+        """
+
+        self.params["description"] = description
+
+    def set_colour(self, colour) -> None:
+        """
+        Set the colour of the embed.
+
+        Parameters:
+            colour (str): The hex colour of the embed.
+        """
+
+        self.params["colour"] = colour        
+
+    def set_author(self, name) -> None:
         """
         Set the author of the embed.
 
         Parameters:
-            text (str): The text of the author.
+            name (str): The name of the author.
         """
 
-        self.params["author"] = text
+        self.params["author"] = name
 
     def set_image(self, url) -> None:
         """
@@ -80,3 +110,5 @@ class Embed:
             return self.hide_text + " " + self.base_url + urllib.parse.urlencode(self.params)
         else:
             return self.base_url + urllib.parse.urlencode(self.params)
+
+    set_color = set_colour
