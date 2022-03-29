@@ -1,4 +1,3 @@
-from click import command
 import discord_self_embed
 from discord.ext import commands
 
