@@ -74,7 +74,7 @@ class Embed:
 
         self.params["colour"] = colour        
 
-    def set_author(self, name, *, url) -> None:
+    def set_author(self, name, *, url="") -> None:
         """
         Set the author of the embed.
 
@@ -88,7 +88,7 @@ class Embed:
         if url:
             self.params["author_url"] = url
 
-    def set_provider(self, name, *, url) -> None:
+    def set_provider(self, name, *, url="") -> None:
         """
         Set the provider of the embed.
 

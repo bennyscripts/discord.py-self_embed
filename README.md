@@ -1,6 +1,6 @@
 # discord.py-self_embed
 A way for selfbots to send embeds again.  
-It uses Rauf's embed generator so its a web embed.  
+It uses [Benny's embed generator](https://embed.benny.fun).
 
 ### Install
 > ```bash
@@ -25,5 +25,4 @@ It uses Rauf's embed generator so its a web embed.
 ### Limitations
 > Because the embeds are web embeds there are limitations.  
 > - No footers.
-> - No author urls.
 > - Max 350 character description.
