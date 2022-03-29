@@ -1,1 +1,1 @@
-from utils.embed import Embed
+from .utils import Embed
