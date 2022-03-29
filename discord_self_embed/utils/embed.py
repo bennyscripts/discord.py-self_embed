@@ -1,7 +1,7 @@
 import urllib.parse
 
 class Embed:
-    def __init__(self, title, *, description = "", colour = "000000", url = "") -> None:
+    def __init__(self, title, **kwargs) -> None:
         """
         Initialize the embed object.
 
@@ -11,6 +11,10 @@ class Embed:
             colour (str): The hex colour of the embed.
             url (str): The url of the embed.
         """
+
+        description = kwargs.get("description", "")
+        colour = kwargs.get("colour", "") or kwargs.get("color", "") or "ffffff"
+        url = kwargs.get("url", "")
 
         if colour.startswith("#"):
             colour = colour[1:]
