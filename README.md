@@ -1,5 +1,6 @@
 # discord.py-self_embed
-A way for selfbots to send embeds again.
+A way for selfbots to send embeds again.  
+It uses Rauf's embed generator so its a web embed.  
 
 ### Install
 > ```bash
@@ -20,3 +21,9 @@ A way for selfbots to send embeds again.
 > url = embed.generate_url(hide_url=True) # You can also convert the embed to a string.
 > print(url) # The url will be put in your ctx.send() content.
 > ```
+
+### Limitations
+> Because the embeds are web embeds there are limitations.  
+> - No footers.
+> - No author urls.
+> - Max 350 character description.
