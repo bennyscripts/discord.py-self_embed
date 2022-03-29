@@ -13,7 +13,7 @@ class Embed:
         """
 
         description = kwargs.get("description", "")
-        colour = kwargs.get("colour", "") or kwargs.get("color", "") or "ffffff"
+        colour = kwargs.get("colour", "") or kwargs.get("color", "") or "000000"
         url = kwargs.get("url", "")
 
         if colour.startswith("#"):
