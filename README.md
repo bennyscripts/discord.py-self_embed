@@ -4,7 +4,7 @@ It uses Rauf's embed generator so its a web embed.
 
 ### Install
 > ```bash
-> $ pip install discord_self_embed
+> $ pip install discord.py-self-embed
 > ```
 
 ### Example
