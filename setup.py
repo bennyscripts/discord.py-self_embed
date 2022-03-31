@@ -41,7 +41,7 @@ setup(
     author='Ben Tettmar',
     author_email='hello@benny.fun',
     url='https://github.com/bentettmar/discord.py-self_embed',
-    download_url='https://github.com/bentettmar/discord.py-self_embed/archive/refs/tags/1.0.5.tar.gz',
+    download_url='https://github.com/bentettmar/discord.py-self_embed/archive/refs/tags/1.0.6.tar.gz',
     keywords=['discord', 'embed', 'selfbot', "discord embed",
               "embed discord", "discord selfbot embed", "embed selfbot discord"],
     install_requires=[],
