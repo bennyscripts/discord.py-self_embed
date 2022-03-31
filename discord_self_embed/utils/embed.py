@@ -122,7 +122,7 @@ class Embed:
 
         self.params["video"] = url
 
-    def generate_url(self, *, hide_url=False) -> str:
+    def generate_url(self, *, hide_url=False, shorten_url=True, shortener=None) -> str:
         """
         Generate the url of the embed.
 
@@ -134,9 +134,14 @@ class Embed:
             if self.params[key] == "" or self.params[key] is None:
                 del self.params[key]
 
+        url = self.base_url + urllib.parse.urlencode(self.params)
+
+        if shorten_url:
+            url = shortener.shorten(url)
+
         if hide_url:
-            return self.hide_text + " " + self.base_url + urllib.parse.urlencode(self.params)
+            return self.hide_text + " " + url
         else:
-            return self.base_url + urllib.parse.urlencode(self.params)
+            return url
 
     set_color = set_colour
