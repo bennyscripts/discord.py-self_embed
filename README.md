@@ -1,6 +1,6 @@
 # discord.py-self_embed
 A way for selfbots to send embeds again.  
-It uses [Benny's embed generator](https://embed.benny.fun).
+It uses [Rauf's embed generator](https://embed.rauf.wtf/).
 
 ### Install
 > ```bash
