@@ -83,10 +83,10 @@ class Embed:
             url (str): The url to redirect to when the author is clicked.
         """
 
-        self.params["author_name"] = name
+        self.params["author"] = name
 
         if url:
-            self.params["author_url"] = url
+            self.params["redirect"] = url
 
     def set_provider(self, name, *, url="") -> None:
         """
