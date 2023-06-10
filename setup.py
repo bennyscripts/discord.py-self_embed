@@ -35,7 +35,7 @@ It uses [Benny's embed generator](https://embed.benny.fun).
 setup(
     name='discord.py-self_embed',
     packages=['discord_self_embed', 'discord_self_embed.utils'],
-    version='1.0.6',
+    version='1.0.8',
     license='MIT',
     description='A way for selfbots to send embeds again.',
     author='Ben Tettmar',
