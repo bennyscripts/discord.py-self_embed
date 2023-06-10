@@ -4,7 +4,7 @@ It uses [Rauf's embed generator](https://embed.rauf.wtf/).
 
 ### Install
 > ```bash
-> $ pip install discord.py-self-embed
+> $ pip install 'discord.py-self_embed @ git+https://github.com/bentettmar/discord.py-self_embed'
 > ```
 
 ### Example
