@@ -30,7 +30,7 @@ class Embed:
         self.params = {
             "title": title,
             "description": description,
-            "colour": colour,
+            "color": colour,
             "url": url
         }
 
