@@ -26,7 +26,7 @@ class Embed:
                 colour = colour[2:]
 
         self.hide_text = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||"
-        self.base_url = "https://embed.rauf.wtf/?"
+        self.base_url = "https://benny.fun/api/embed?"
         self.params = {
             "title": title,
             "description": description,
@@ -83,10 +83,10 @@ class Embed:
             url (str): The url to redirect to when the author is clicked.
         """
 
-        self.params["author"] = name
+        self.params["author_name"] = name
 
         if url:
-            self.params["redirect"] = url
+            self.params["author_url"] = url
 
     def set_provider(self, name, *, url="") -> None:
         """
@@ -102,15 +102,17 @@ class Embed:
         if url:
             self.params["provider_url"] = url
 
-    def set_image(self, url) -> None:
+    def set_image(self, url, big=False) -> None:
         """
-        Set the image of the embed.
+        Set the image of the embed. By default you will get a thumbnail in the right corner. For a larger image set big to True.
 
         Parameters:
             url (str): The url of the image.
+            big (bool): Whether the image should be big.
         """
 
         self.params["image"] = url
+        self.params["big_image"] = big
 
     def set_video(self, url) -> None:
         """
@@ -122,7 +124,7 @@ class Embed:
 
         self.params["video"] = url
 
-    def generate_url(self, *, hide_url=False, shorten_url=True, shortener=None) -> str:
+    def generate_url(self, *, hide_url=False, shorten_url=False, shortener=None) -> str:
         """
         Generate the url of the embed.
 
