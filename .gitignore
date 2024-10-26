@@ -2,3 +2,6 @@
 *.egg
 dist/*
 build/*
+test.py
+discord_self_embed/utils/__pycache__/*
+*/__pycache__/*
