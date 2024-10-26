@@ -3,7 +3,7 @@ from distutils.core import setup
 readme = """
 # discord.py-self_embed
 A way for selfbots to send embeds again.  
-It uses [Benny's embed generator](https://embed.benny.fun).
+It uses [Benny's embed generator](https://benny.fun/api/embed).
 
 ### Install
 > ```bash
@@ -16,10 +16,10 @@ It uses [Benny's embed generator](https://embed.benny.fun).
 > 
 > embed = discord_self_embed.Embed("discord.py-self_embed", 
 >   description="A way for selfbots to send embeds again.", 
->   colour="ff0000", 
->   url="https://github.com/bentettmar/discord.py-self_embed"
+>   colour="FFBB00"
 > )
-> embed.set_author("Ben Tettmar")
+> embed.set_author("Benny")
+> embed.set_image("https://raw.githubusercontent.com/bennyscripts/ghost/refs/heads/main/ghost.png", big=False)
 > 
 > url = embed.generate_url(hide_url=True) # You can also convert the embed to a string.
 > print(url) # The url will be put in your ctx.send() content.
@@ -35,13 +35,13 @@ It uses [Benny's embed generator](https://embed.benny.fun).
 setup(
     name='discord.py-self_embed',
     packages=['discord_self_embed', 'discord_self_embed.utils'],
-    version='1.0.8',
+    version='1.0.9',
     license='MIT',
     description='A way for selfbots to send embeds again.',
     author='Ben Tettmar',
     author_email='hello@benny.fun',
     url='https://github.com/bentettmar/discord.py-self_embed',
-    download_url='https://github.com/bentettmar/discord.py-self_embed/archive/refs/tags/1.0.6.tar.gz',
+    download_url='https://github.com/bennyscripts/discord.py-self_embed/archive/refs/tags/1.0.9.tar.gz',
     keywords=['discord', 'embed', 'selfbot', "discord embed",
               "embed discord", "discord selfbot embed", "embed selfbot discord"],
     install_requires=[],
